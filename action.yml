@@ -2,19 +2,16 @@ name: 'Jtest scan Action'
 description: 'Source code scanning for vulnerabilities using Jtest tool'
 author: 'Darek'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  build-system:  # build system name
+    description: 'Project build system (gradle|maven|ant)'
     required: true
-    default: 'World'
-outputs:
-  random-number: 
-    description: "Random number"
-    value: ${{ steps.random-number-generator.outputs.random-id }}
+    default: 'maven'
 runs:
   using: "composite"
-  steps: 
-    - run: echo Hello ${{ inputs.who-to-greet }}.
-      shell: bash
-    - id: random-number-generator
-      run: echo "::set-output name=random-id::$(echo $RANDOM)"
-      shell: bash
+  steps:
+    - name: Run Jtest with maven
+      if: ${{inputs.build-system == 'maven'}}
+      run: echo using jtest with maven :)
+    - name: Run Jtest with gradle
+      if: ${{inputs.build-system == 'gradle'}}
+      run: echo using jtest with gradle :)
