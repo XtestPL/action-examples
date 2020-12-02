@@ -7,11 +7,12 @@ inputs:
     required: true
     default: 'maven'
 runs:
-  using: "composite"
-  steps:
-    - name: Run Jtest with maven
-      if: ${{inputs.build-system == 'maven'}}
-      run: echo using jtest with maven :)
-    - name: Run Jtest with gradle
-      if: ${{inputs.build-system == 'gradle'}}
-      run: echo using jtest with gradle :)
+  using: node12
+  main: index.js
+#  steps:
+#    - name: Run Jtest with maven
+#      if: ${{inputs.build-system == 'maven'}}
+#      run: echo using jtest with maven :)
+#    - name: Run Jtest with gradle
+#      if: ${{inputs.build-system == 'gradle'}}
+#      run: echo using jtest with gradle :)

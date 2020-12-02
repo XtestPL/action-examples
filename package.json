@@ -1,0 +1,23 @@
+{
+  "name": "action-examples",
+  "version": "1.0.0",
+  "description": "Repository to test action",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XtestPL/action-examples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XtestPL/action-examples/issues"
+  },
+  "homepage": "https://github.com/XtestPL/action-examples#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6"
+  }
+}
