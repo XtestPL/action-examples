@@ -1,4 +1,6 @@
 const core = require('@actions/core');
+const exec = require('@actions/exec');
+
 try {
     const buildSystem = core.getInput('build-system');
     console.log(`Jtest tool is going to use ${buildSystem}!`);
