@@ -11,3 +11,6 @@ runs:
     - name: Run  Analyzer
       run: echo &{{inputs.command}}
       shell: bash
+branding:
+  icon: 'check'  
+  color: 'green'
