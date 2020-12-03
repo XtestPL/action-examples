@@ -1,5 +1,5 @@
-name: 'Parasoft Static Analysis Scan'
-description: 'Source code scanning for vulnerabilities using Parasoft tool'
+name: 'Static Analysis Scan'
+description: 'Source code scanning for vulnerabilities using tool'
 author: 'Xtest'
 inputs:
   command:
@@ -8,6 +8,6 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Run Parasoft Analyzer
-      run: &{{inputs.command}} -Dproperty.report.format.sarif=true
+    - name: Run  Analyzer
+      run: echo &{{inputs.command}}
       shell: bash
