@@ -1,4 +1,4 @@
-name: 'Static Analysis Scan'
+name: 'Parasoft Static Analysis Scan'
 description: 'Source code scanning for vulnerabilities using tool'
 author: 'Xtest'
 inputs:
